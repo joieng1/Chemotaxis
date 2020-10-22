@@ -4,10 +4,10 @@ boolean alive = true;
 int status = ((int)(Math.random()*256));
 void setup()   
  {     
-   size(1920,1080);
+   size(900,900);
    Bob = new Food[100]; 
    for(int i = 0; i< Bob.length;i++){
-     Bob[i] = new Food(((int)(Math.random()*1920)),((int)(Math.random()*1080)));
+     Bob[i] = new Food(((int)(Math.random()*900)),((int)(Math.random()*900)));
    }
    you1 = new you(200,100);
    //initialize Food variables here   
@@ -23,9 +23,9 @@ void setup()
       }
      }
     if(alive == false){
-    textSize(50);
+    textSize(20);
       fill(200);
-      text("You lost, click your mouse to try again.",500,540);
+      text("You lost, click your mouse to try again.",250,450);
     }
      you1.show();
      you1.walk();
