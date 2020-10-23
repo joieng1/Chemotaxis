@@ -11,7 +11,7 @@ void setup()
    for(int i = 0; i< Bob.length;i++){
      Bob[i] = new Food(((int)(Math.random()*800)+100),((int)(Math.random()*900)));
    }
-   you1 = new you(50,50);
+   you1 = new you(50,(int)(Math.random()*800)+100);
    //initialize Food variables here   
  }   
  void draw()   
@@ -44,7 +44,7 @@ void setup()
    }
  } 
  void mousePressed(){
-   you1 = new you(50,50);
+   you1 = new you(50,(int)(Math.random()*800)+100);
    keepwalking = true;
    alive = true;
     g = (800);
