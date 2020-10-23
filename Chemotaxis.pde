@@ -27,7 +27,9 @@ void setup()
      Bob[i].walk();
      if(dist(Bob[i].myX,Bob[i].myY,you1.youX,you1.youY)<20){
       alive = false;
-      text("You lost, click on your mouse to try again", 350,450);
+      }
+      if (alive == false){
+        text("You lost, click on your mouse to try again", 350,450);
       }
      }
      you1.show();
