@@ -1,7 +1,9 @@
 Food[] Bob;
 you you1;
 boolean alive = true;
-int status = ((int)(Math.random()*256));
+int g = ((int)(Math.random()*900));
+int g1 = ((int)(Math.random()*900));
+boolean keepwalking = true;
 void setup()   
  {     
    size(900,900);
@@ -15,24 +17,32 @@ void setup()
  void draw()   
  {   
    background(0); 
+   fill(200);
+   ellipse(g,g1,70,70);
+   fill(200,2,240);
+   ellipse(g,g1,45,45);
+   if(keepwalking == true){
    for (int i = 0; i < Bob.length;i++){
      Bob[i].show();
      Bob[i].walk();
      if(dist(Bob[i].myX,Bob[i].myY,you1.youX,you1.youY)<20){
       alive = false;
+      text("You lost, click on your mouse to try again", 350,450);
       }
      }
-    if(alive == false){
-    textSize(20);
-      fill(200);
-      text("You lost, click your mouse to try again.",250,450);
-    }
      you1.show();
      you1.walk();
-    
+   }
+   if(dist(g,g1,you1.youX,you1.youY)<15){
+     keepwalking = false;
+     text("You win, click on your mouse to try again", 350,450);
+   }
  } 
  void mousePressed(){
    alive = true;
+    g = ((int)(Math.random()*900));
+    g1 = ((int)(Math.random()*900));
+   keepwalking = true;
  }
  class Food    
  {     
