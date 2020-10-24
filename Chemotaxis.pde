@@ -88,11 +88,11 @@ void setup()
    }
    void walk(){
     if(mouseX> youX){
-    youX = youX + ((int)(Math.random()*5)-1);
+    youX = youX + 2;
   }else{
     youX = youX + ((int)(Math.random()*5)-3);
   }if(mouseY> youY){
-    youY = youY + ((int)(Math.random()*5)-1);
+    youY = youY + 2;
   }else{
     youY = youY + ((int)(Math.random()*5)-3);
     } 
